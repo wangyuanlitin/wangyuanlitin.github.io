@@ -10,18 +10,18 @@
   <meta name="baidu-site-verification" content="WTE66YwwYY">
   <title>Web通信之长轮询、长连接 | 王小王</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="需求：　为了减少账号的共用，在执行某项操作之前需要微信扫码验证才能进入，二维码没隔3s更新一次实现：　前端和后端保持一个长连接，后端会定时发送唯一地址到前端，前端将地址转成二维码显示出来 在这之前没有接触过WebSocket之类的东西，也不清楚长连接和长轮询之间有什么区别，下面记录一下一些学习笔记 轮询在特定的时间间隔(setInterval),　浏览器向服务器发送HTTP请求，服务器返回结果缺点">
+  <meta name="description" content="需求：为了减少账号的共用，在执行某项操作之前需要微信扫码验证才能进入，二维码没隔3s更新一次实现：前端和后端保持一个长连接，后端会定时发送唯一地址到前端，前端将地址转成二维码显示出来 在这之前没有接触过WebSocket之类的东西，也不清楚长连接和长轮询之间有什么区别，下面记录一下一些学习笔记 轮询在特定的时间间隔(setInterval),　浏览器向服务器发送HTTP请求，服务器返回结果缺点：实">
 <meta name="keywords" content="前端,通信,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web通信之长轮询、长连接">
 <meta property="og:url" content="http://yoursite.com/2017/07/24/web-signal-communication/index.html">
 <meta property="og:site_name" content="王小王">
-<meta property="og:description" content="需求：　为了减少账号的共用，在执行某项操作之前需要微信扫码验证才能进入，二维码没隔3s更新一次实现：　前端和后端保持一个长连接，后端会定时发送唯一地址到前端，前端将地址转成二维码显示出来 在这之前没有接触过WebSocket之类的东西，也不清楚长连接和长轮询之间有什么区别，下面记录一下一些学习笔记 轮询在特定的时间间隔(setInterval),　浏览器向服务器发送HTTP请求，服务器返回结果缺点">
+<meta property="og:description" content="需求：为了减少账号的共用，在执行某项操作之前需要微信扫码验证才能进入，二维码没隔3s更新一次实现：前端和后端保持一个长连接，后端会定时发送唯一地址到前端，前端将地址转成二维码显示出来 在这之前没有接触过WebSocket之类的东西，也不清楚长连接和长轮询之间有什么区别，下面记录一下一些学习笔记 轮询在特定的时间间隔(setInterval),　浏览器向服务器发送HTTP请求，服务器返回结果缺点：实">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-12-14T03:28:59.409Z">
+<meta property="og:updated_time" content="2023-06-01T12:43:16.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web通信之长轮询、长连接">
-<meta name="twitter:description" content="需求：　为了减少账号的共用，在执行某项操作之前需要微信扫码验证才能进入，二维码没隔3s更新一次实现：　前端和后端保持一个长连接，后端会定时发送唯一地址到前端，前端将地址转成二维码显示出来 在这之前没有接触过WebSocket之类的东西，也不清楚长连接和长轮询之间有什么区别，下面记录一下一些学习笔记 轮询在特定的时间间隔(setInterval),　浏览器向服务器发送HTTP请求，服务器返回结果缺点">
+<meta name="twitter:description" content="需求：为了减少账号的共用，在执行某项操作之前需要微信扫码验证才能进入，二维码没隔3s更新一次实现：前端和后端保持一个长连接，后端会定时发送唯一地址到前端，前端将地址转成二维码显示出来 在这之前没有接触过WebSocket之类的东西，也不清楚长连接和长轮询之间有什么区别，下面记录一下一些学习笔记 轮询在特定的时间间隔(setInterval),　浏览器向服务器发送HTTP请求，服务器返回结果缺点：实">
   
   
     <link rel="icon" href="/assets/images/favicon.ico">
@@ -163,7 +163,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>需求：　为了减少账号的共用，在执行某项操作之前需要微信扫码验证才能进入，二维码没隔3s更新一次<br>实现：　前端和后端保持一个长连接，后端会定时发送唯一地址到前端，前端将地址转成二维码显示出来</p>
+        <p>需求：为了减少账号的共用，在执行某项操作之前需要微信扫码验证才能进入，二维码没隔3s更新一次<br>实现：前端和后端保持一个长连接，后端会定时发送唯一地址到前端，前端将地址转成二维码显示出来</p>
 <p>在这之前没有接触过WebSocket之类的东西，也不清楚长连接和长轮询之间有什么区别，下面记录一下一些学习笔记</p>
 <h3 id="轮询"><a href="#轮询" class="headerlink" title="轮询"></a>轮询</h3><p>在特定的时间间隔(setInterval),　浏览器向服务器发送HTTP请求，服务器返回结果<br>缺点：实现实时性不高，服务器压力大。<br>实现：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	ajax(&#123;</span><br><span class="line">		type: <span class="string">'get'</span>,</span><br><span class="line">		url: url</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;, <span class="number">5</span> * <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
@@ -387,15 +387,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">代码片段</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -419,10 +419,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
@@ -432,10 +428,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Promise</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Node</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -451,19 +443,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">鸡汤</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTML5，JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">通信</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HTML5，JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">

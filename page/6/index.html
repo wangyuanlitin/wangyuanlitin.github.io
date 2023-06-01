@@ -140,508 +140,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-web-front" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/11/web-front/">说一下前端</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/11/web-front/" class="archive-article-date">
-  	<time datetime="2017-07-11T11:54:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>不知道该怎么形容前端这个职业？变幻莫测？斗转星移？刷知乎的时候，有人说，每隔一年，招一个前端的难度就加大一些。</p>
-<p>前端从简单的静态页面，到可复用性，工程化，组件化，再加入state管理，仅仅用了不到2年的时间（这个时间是按照我接触的时间算的，也有可能变化的更快）。从简单的haml开始，到backbone，最后精力转移到node，接触框架Ember.js，然后开始接触火爆的react，用了短短的两年时间，在这期间也出了火爆的AngularJ和Vue，虽然万变不离其宗，但是掌握其核心思想还是很有必要的。</p>
-<p>个人认为，自node的出现，加速了前端改变，当然也有前端越来越复杂的因素，迫切需要工程化的东西。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/11/web-front/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-bubble-sort" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/19/bubble-sort/">冒泡排序</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/19/bubble-sort/" class="archive-article-date">
-  	<time datetime="2017-05-19T05:45:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原理：比较相邻的两个元素，如果前一个比后一个大，则交换位置。</p>
-<p>注意：是相邻，第二个和第三个比较，第三个和第四个比较</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> length = array.length;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; length <span class="number">-1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; length - <span class="number">1</span>-i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="keyword">var</span> temp = array[j];</span><br><span class="line">        array[j] = array[j + <span class="number">1</span>];</span><br><span class="line">        array[j+<span class="number">1</span>] = temp;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`第<span class="subst">$&#123;i&#125;</span>轮排序: <span class="subst">$&#123;array&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> needSort = [<span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">let</span> res = bubbleSort(needSort);</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/05/19/bubble-sort/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/19/bubble-sort/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-storage-cookie" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/storage-cookie/">Cookies，Local Storage，Session　Storage之间的差异</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/10/storage-cookie/" class="archive-article-date">
-  	<time datetime="2017-05-10T06:02:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <table>
-<thead>
-<tr>
-<th></th>
-<th>Cookies</th>
-<th style="text-align:center">Local Storage</th>
-<th style="text-align:right">Session Storage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>共同点</td>
-<td>都是保存在浏览器端，且同源的</td>
-<td style="text-align:center"></td>
-<td style="text-align:right"></td>
-</tr>
-<tr>
-<td>传输</td>
-<td>始终在同源的http请求中携带</td>
-<td style="text-align:center">保存在本地</td>
-<td style="text-align:right">保存在本地</td>
-</tr>
-<tr>
-<td>大小</td>
-<td>最大4k</td>
-<td style="text-align:center">可以达到5M或更大。</td>
-<td style="text-align:right">可以达到5M或更大。</td>
-</tr>
-<tr>
-<td>有效期</td>
-<td>浏览器关闭，或者是设置的过期时间之前有效</td>
-<td style="text-align:center">始终有效，窗口或浏览器关闭也一直保存</td>
-<td style="text-align:right">仅在当前浏览器窗口关闭前有效</td>
-</tr>
-<tr>
-<td>作用域</td>
-<td>所有同源窗口中都是共享的</td>
-<td style="text-align:center">所有同源窗口中都是共享</td>
-<td style="text-align:right">仅在浏览器的标签页，关闭标签则删除</td>
-</tr>
-</tbody>
-</table>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/10/storage-cookie/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-node-questions" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/20/node-questions/">Node.js 开发问题，不断更新</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/20/node-questions/" class="archive-article-date">
-  	<time datetime="2017-04-20T06:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近在重构一些之前的功能，项目用的是Node.js + express，发现很多问题</p>
-<h2 id="问题-List"><a href="#问题-List" class="headerlink" title="问题 List"></a>问题 List</h2><h3 id="1-promise-timeout"><a href="#1-promise-timeout" class="headerlink" title="1. promise timeout"></a>1. promise timeout</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doWhatEver</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  doSomeThing().then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = doOtherSomeThing();</span><br><span class="line">    resolve(result);</span><br><span class="line">  &#125;, (error) =&gt; &#123;</span><br><span class="line">    reject(error);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/04/20/node-questions/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/20/node-questions/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-es6-new-feature" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/18/es6-new-feature/">ES6/ECMAScript2015 新特性</a>
-    </h1>
-  
-
-        
-        <a href="/2016/07/18/es6-new-feature/" class="archive-article-date">
-  	<time datetime="2016-07-18T05:08:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>1、新增数据类型Symbol</p>
-</blockquote>
-<blockquote>
-<p>2、新增数据结构set、map</p>
-</blockquote>
-<blockquote>
-<p>3、let和const关键字</p>
-</blockquote>
-<blockquote>
-<p>4、提供Class类</p>
-</blockquote>
-<blockquote>
-<p>5、变量的结构赋值</p>
-</blockquote>
-<blockquote>
-<p>6、原生提供Promise对象</p>
-</blockquote>
-<ol>
-<li><p>Symbol</p>
-</li>
-<li><p>map和set有哪些方法？<br>map { set、 get、}</p>
-</li>
-<li>var、let、const之间的区别</li>
-</ol>
-<ul>
-<li>作用域不一样，let、const是块级作用域</li>
-<li>挂载不一样，var可以挂载到windows上，let和const不会</li>
-<li>var有变量提升，let和const没有</li>
-<li>let、const不可以声明同名变量，var可以</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/18/es6-new-feature/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-ffmpeg-cli" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/28/ffmpeg-cli/">实际开发中遇到的一些ffmpeg命令</a>
-    </h1>
-  
-
-        
-        <a href="/2015/10/28/ffmpeg-cli/" class="archive-article-date">
-  	<time datetime="2015-10-28T07:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>试错很久，mark一下，Node.js 中可以使用fluent-ffmpeg</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg <span class="literal">-i</span> video.mp4 <span class="literal">-c</span> copy <span class="literal">-an</span> video<span class="literal">-no</span><span class="literal">-audio</span>.mp4 <span class="comment"># 去掉video.mp4中的视频声音</span></span><br><span class="line"></span><br><span class="line">ffmpeg <span class="literal">-i</span> video.mp4 <span class="literal">-vn</span> <span class="literal">-acodec</span> copy audio.aac <span class="comment"># 拿到video.mp4中的声音</span></span><br><span class="line"></span><br><span class="line">ffmpeg <span class="literal">-i</span> input <span class="literal">-strict</span> <span class="literal">-2</span> output.wav <span class="comment"># 将input音频转成wav</span></span><br><span class="line"></span><br><span class="line">ffmpeg <span class="literal">-i</span> video<span class="literal">-no</span><span class="literal">-audio</span>.mp4 <span class="literal">-i</span> <span class="number">01</span>.m4a <span class="literal">-c</span>:v copy <span class="literal">-c</span>:a copy <span class="built_in">merge-video</span><span class="literal">-audio</span>.mp4 <span class="comment"># video-no-audio.mp4（没有声音的视频） 01.m4a（声音文件）合成新视频</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ffmpeg <span class="literal">-i</span> video.mp4  (<span class="literal">-ss</span> <span class="number">0</span> ) <span class="literal">-t</span> <span class="number">5</span> <span class="literal">-acodec</span> copy <span class="literal">-vcodec</span> copy b.mp4 <span class="comment"># 截取视频长度，从0到5秒</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ffmpeg <span class="literal">-ar</span> <span class="number">48000</span> <span class="literal">-t</span> <span class="number">60</span>(参数) <span class="operator">-f</span> s16le <span class="literal">-acodec</span> pcm_s16le <span class="literal">-ac</span> <span class="number">2</span> <span class="literal">-i</span> /dev/zero <span class="literal">-acodec</span> copy output.wav <span class="comment">#生成一个60秒的空白音频</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ffmpeg <span class="literal">-ar</span> <span class="number">48000</span> <span class="literal">-t</span> <span class="number">5</span>(参数) <span class="operator">-f</span> s16le <span class="literal">-acodec</span> pcm_s16le <span class="literal">-ac</span> <span class="number">2</span> <span class="literal">-i</span> /dev/zero <span class="literal">-acodec</span> libmp3lame <span class="literal">-aq</span> <span class="number">4</span> output.mp3 <span class="comment"># 生成一个5秒的空白音频mp3</span></span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/10/28/ffmpeg-cli/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-array-unique" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/27/array-unique/">数组去重</a>
-    </h1>
-  
-
-        
-        <a href="/2015/05/27/array-unique/" class="archive-article-date">
-  	<time datetime="2015-05-26T21:05:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>基本类型数组去重</p>
-<ul>
-<li>方法一：</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(array))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>方法二：</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res = [];</span><br><span class="line">  array.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (res.indexOf(item) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">      res.push(item);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">代码片段</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/05/27/array-unique/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-calculate-letter-times" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -700,9 +198,141 @@
 
 
   
+    <article id="post-mysqldump" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/24/mysqldump/">数据库远程复制，导入到本地</a>
+    </h1>
+  
+
+        
+        <a href="/2014/11/24/mysqldump/" class="archive-article-date">
+  	<time datetime="2014-11-24T02:33:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-11-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>eg. 从主机1.1.1.1复制数据库到本地</p>
+<ul>
+<li><p>mysqldump -h1.1.1.1 -u用户名 -p密码 数据库名 &gt;  temp.sql</p>
+</li>
+<li><p>登录本地MySQL</p>
+</li>
+<li><p>选择要导入的数据库， use temp</p>
+</li>
+<li><p>source temp.sql </p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2014/11/24/mysqldump/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-detech-mobile-device" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/11/detech-mobile-device/">JavaScript检测是否是移动设备</a>
+    </h1>
+  
+
+        
+        <a href="/2014/09/11/detech-mobile-device/" class="archive-article-date">
+  	<time datetime="2014-09-11T11:56:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-https-web-wurfl-io"><a href="#1-https-web-wurfl-io" class="headerlink" title="1. https://web.wurfl.io/"></a>1. <a href="https://web.wurfl.io/" target="_blank" rel="noopener">https://web.wurfl.io/</a></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script src=<span class="string">"//wurfl.io/wurfl.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>WURFL.is_mobile                  判断是否是手机，返回true/false<br>WURFL.complete_device_name       获取手机具体型号</p>
+<h3 id="2-http-hgoebl-github-io-mobile-detect-js"><a href="#2-http-hgoebl-github-io-mobile-detect-js" class="headerlink" title="2. http://hgoebl.github.io/mobile-detect.js/"></a>2. <a href="http://hgoebl.github.io/mobile-detect.js/" target="_blank" rel="noopener">http://hgoebl.github.io/mobile-detect.js/</a></h3>
+        
+          <a class="article-more-a" href="/2014/09/11/detech-mobile-device/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2014/09/11/detech-mobile-device/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
     </nav>
   
 
@@ -797,15 +427,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">代码片段</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -829,10 +459,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
@@ -842,10 +468,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Promise</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Node</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -861,19 +483,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">鸡汤</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTML5，JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">通信</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HTML5，JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">

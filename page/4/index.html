@@ -140,424 +140,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-event-degegate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/30/event-degegate/">事件－内存与性能</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/30/event-degegate/" class="archive-article-date">
-  	<time datetime="2018-03-30T06:06:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>在JavaScript中，添加到頁面上的事件處理程序數量直接關系到頁面的整體運行性能<br>主要原因:</p>
-<ol>
-<li>JavaScript中，每個函數都是對象，都会占用内存；內存中的创建的對象越多，性能就越差</li>
-<li>過多的DOM操作，會延遲整個頁面的交互時間</li>
-</ol>
-<p>如何利用好事件處理程序，也会有效提高性能问题</p>
-<h3 id="1-事件委托"><a href="#1-事件委托" class="headerlink" title="1. 事件委托"></a>1. 事件委托</h3><p>對”事件處理程序過多”問題的解決方案就是市建委託,事件委託利用了事件冒泡,只指定一個事件處理程序,就可以管理同一類型的所有事件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1</span></span><br><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;<span class="number">1</span>&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">  &lt;li&gt;2&lt;/</span>li&gt;</span><br><span class="line">  &lt;li&gt;<span class="number">3</span>&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&lt;/u</span>l&gt;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/03/30/event-degegate/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/30/event-degegate/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Debouncing-Throttling" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/23/Debouncing-Throttling/">防抖动和节流阀</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/23/Debouncing-Throttling/" class="archive-article-date">
-  	<time datetime="2018-03-23T03:40:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>看一个滚动的例子</p>
-<iframe height="500" scrolling="no" title="demo" src="//codepen.io/wangyuanlitin/embed/qojoGP/?height=300&theme-id=32936&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 60%;"></iframe>
-
-<p>在这个例子中，你会发现，当鼠标滚轮滚动的时，不管怎么控制，少则触发十几次，多则触发几十次，甚至几百次，<br>如果当前页面比较复杂，频繁的操作DOM会引起很大的性能问题</p>
-<blockquote>
-<p>针对这种频繁触发（如scroll, resize, audio.ontimeupdate等）、短时间内多次调用，十分影响性能的操作，可以使用防止抖动和节流阀的处理方式</p>
-</blockquote>
-<h3 id="1-防抖动"><a href="#1-防抖动" class="headerlink" title="1. 防抖动"></a>1. 防抖动</h3>
-        
-          <a class="article-more-a" href="/2018/03/23/Debouncing-Throttling/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/23/Debouncing-Throttling/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-safe" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/17/safe/">前端安全问题 - XSS</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/17/safe/" class="archive-article-date">
-  	<time datetime="2018-03-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>工作以来很少关注过前端安全问题，一直认为只要后端拦截就可以了，前端影响不大，直到问题的出现…</p>
-<h3 id="1、背景"><a href="#1、背景" class="headerlink" title="1、背景"></a>1、背景</h3><p><img src="/assets/images/xss-1.png" alt="question"></p>
-<p>上面这段代码有看到什么安全隐患吗？</p>
-<p>关键就是这一行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location.href = url</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/03/17/safe/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/17/safe/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-getter-setter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/07/getter-setter/">JavaScript中的getter和setter</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/07/getter-setter/" class="archive-article-date">
-  	<time datetime="2018-03-07T12:30:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>get和set访问器分别是用来获取或者设置对象属性的</p>
-<h3 id="1-浏览器支持"><a href="#1-浏览器支持" class="headerlink" title="1. 浏览器支持"></a>1. 浏览器支持</h3><p>（1）.IE9+<br>（2）.Edge<br>（3）.Chrome<br>（4）.Firefox<br>（5）.Opera<br>（6）.Safari</p>
-<h3 id="2-标准get和set访问器的使用"><a href="#2-标准get和set访问器的使用" class="headerlink" title="2. 标准get和set访问器的使用"></a>2. 标准get和set访问器的使用</h3>
-        
-          <a class="article-more-a" href="/2018/03/07/getter-setter/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/07/getter-setter/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/02/webpack/">webpack</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/02/webpack/" class="archive-article-date">
-  	<time datetime="2018-03-02T02:22:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p style="text-decoration: line-through;">webpack是一个模块化打包工具，所有的配置放在配置文件里面，最终可以打包到指定文件中，比如样式，图片通过webpack都可以打包到一个js文件中</p>
-
-<p>(2018.10.9修改)</p>
-<p>webpack是一个模块化打包工具, 通过配置文件，将不能直接运行在浏览器上的代码，通过编译打包为可执行的JavaScript、CSS、HTML，适合浏览器运行，其主要工作内容包括</p>
-<p>代码转换：Jsx编译成Js，SCSS编译成CSS<br>文件优化：压缩代码，压缩合并图片, 分包等<br>代码分割：提取公共代码，提取首屏不需要加载的代码<br>模块合并：将多个模块打包成一个文件<br>自动刷新：热加载<br>代码校验：eslint<br>自动发布：</p>
-<h3 id="1-对比webpack与gulp在使用中的优缺点"><a href="#1-对比webpack与gulp在使用中的优缺点" class="headerlink" title="1. 对比webpack与gulp在使用中的优缺点"></a>1. 对比webpack与gulp在使用中的优缺点</h3><blockquote>
-<p>gulp优势：</p>
-<ul>
-<li>上手简单</li>
-<li>轻量的，需要什么功能,添加什么功能</li>
-<li>插件多，估计你想要的都可以在社区找到</li>
-<li>依赖小，各个任务之间比较独立<br>gulp劣势：</li>
-<li>任务多时，维护起来比较麻烦</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>webpack优势：</p>
-<ul>
-<li>容易做SPA</li>
-<li>以entry为入口文件，模块化加载所有引用到的文件</li>
-<li>插件丰富<br>gulp劣势：</li>
-<li>配置惊人</li>
-</ul>
-</blockquote>
-        
-          <a class="article-more-a" href="/2018/03/02/webpack/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/02/webpack/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-ajax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/08/ajax/">Ajax的核心 - XMLHttpRequest</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/08/ajax/" class="archive-article-date">
-  	<time datetime="2018-02-08T03:34:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>是什么？ 是一个异步JavaScript和XML，是一种<strong>技术</strong><br>干什么？ 异步请求数据，快速呈现在界面上，不需要刷新页面</p>
-<h2 id="1-XMLHttpRequest"><a href="#1-XMLHttpRequest" class="headerlink" title="1. XMLHttpRequest"></a>1. XMLHttpRequest</h2><ul>
-<li><strong>1.1</strong> 简单的例子<br>同步<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">xhr.open(<span class="string">'get'</span>, <span class="string">'url'</span>, <span class="literal">false</span>)</span><br><span class="line">xhr.send(<span class="string">'数据'</span>) <span class="comment">//　如果不需要发送数据，则必须传入null</span></span><br><span class="line"><span class="comment">//　因为是同步，接下来就可以从xhr读取返回内容</span></span><br><span class="line">xhr.responseText <span class="comment">// 返回结果</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/02/08/ajax/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/08/ajax/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-videojs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -685,9 +267,396 @@
 
 
   
+    <article id="post-assert" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/23/assert/">Node.js Assert 模块</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/23/assert/" class="archive-article-date">
+  	<time datetime="2018-01-23T12:41:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>断言-主要用于Node.js测试</p>
+</blockquote>
+<hr>
+<ul>
+<li><p>API</p>
+<ol>
+<li>assert(value[, message])<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>)</span><br><span class="line"></span><br><span class="line">assert(<span class="number">1</span>) <span class="comment">// true</span></span><br><span class="line">assert(<span class="number">0</span>) <span class="comment">// false  报错信息: 0 == true</span></span><br><span class="line">assert(<span class="number">-1</span>) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">assert(<span class="number">0</span>, <span class="string">'报错报错报错'</span>) <span class="comment">// false 报错信息：报错报错报错</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+        
+          <a class="article-more-a" href="/2018/01/23/assert/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/23/assert/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-stickyfooter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/20/stickyfooter/">CSS Sticky Footer 方法一</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/20/stickyfooter/" class="archive-article-date">
+  	<time datetime="2018-01-20T03:34:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p><strong>把content和footer包在wrapper里面</strong></p>
+<blockquote>
+<ol>
+<li>html、body设置height为100%</li>
+<li>footer绝对定位于wrapper底部</li>
+<li>上面设置完成后，footer就可以一直保持在页面底部</li>
+</ol>
+</blockquote>
+<p>问题：当窗口缩放时，会出现footer将内容遮住</p>
+<p>解决：给wrapper一个padding-bottom，高度与footer的高度一致（适用于footer高度固定）</p>
+<p>以下是源码，直接把内容拷贝到html文件中，在浏览器中查看效果<br>
+        
+          <a class="article-more-a" href="/2018/01/20/stickyfooter/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/20/stickyfooter/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-function" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/11/function/">纯函数</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/11/function/" class="archive-article-date">
+  	<time datetime="2018-01-11T05:57:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h3 id="1-什么是纯函数"><a href="#1-什么是纯函数" class="headerlink" title="1. 什么是纯函数"></a>1. 什么是纯函数</h3><p>不依赖系统的状态，不依赖且不改变作用域以外的变量，也就是说，如果参数相同，那么返回值也相同，输出完全取决于输入<br>纯函数是函数式变成的一个基础</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-优点"><a href="#2-优点" class="headerlink" title="2. 优点"></a>2. 优点</h3>
+        
+          <a class="article-more-a" href="/2018/01/11/function/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/11/function/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-video" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/23/video/">H5 Video 参数和方法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/23/video/" class="archive-article-date">
+  	<time datetime="2017-09-23T06:01:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>HTML5 Video对象的所有属性和方法示例</p>
+<p><a href="https://www.w3.org/2010/05/video/mediaevents.html" target="_blank" rel="noopener">参考链接</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">HTML5，JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/23/video/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-js-b" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/21/js-b/">javascript 链接</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/21/js-b/" class="archive-article-date">
+  	<time datetime="2017-08-21T02:28:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/jawil/blog/issues/24" target="_blank" rel="noopener">链接1</a><br><a href="https://sdk.cn/news/3025" target="_blank" rel="noopener">链接2</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/21/js-b/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/15/git/">Git</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/15/git/" class="archive-article-date">
+  	<time datetime="2017-08-15T11:01:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>平时常用命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git init //初始化版本库，执行完后会发现目录下多一个.git的目录</span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:wangyuanlitin/blogsource.git　//添加已有仓库</span><br><span class="line"></span><br><span class="line">git clone git@github.com:wangyuanlitin/blogsource.git //从仓库clone代码</span><br><span class="line"></span><br><span class="line">git branch dev //创建分支</span><br><span class="line"></span><br><span class="line">git checkout branch //切换分支</span><br><span class="line"></span><br><span class="line">git checkout project/a //撤销修改</span><br><span class="line"></span><br><span class="line">git status //查看当前修改状态</span><br><span class="line"></span><br><span class="line">git diff project/a //比较文件和未修改前的差异</span><br><span class="line"></span><br><span class="line">git add . //添加到索引库</span><br><span class="line"></span><br><span class="line">git commit -m "提交" //提交到本地库</span><br><span class="line"></span><br><span class="line">git push //提交到远程库</span><br><span class="line"></span><br><span class="line">git merge dev //dev分支合并到当前分支</span><br><span class="line"></span><br><span class="line">git log //查看提交记录</span><br><span class="line"></span><br><span class="line">git reset log-commit //回退到某个版本</span><br></pre></td></tr></table></figure>
+<p>接下来需要看的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase //</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/15/git/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 
@@ -782,15 +751,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">代码片段</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -814,10 +783,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
@@ -827,10 +792,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Promise</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Node</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -846,19 +807,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">鸡汤</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTML5，JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">通信</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HTML5，JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
